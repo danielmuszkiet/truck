@@ -1,0 +1,756 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500&display=swap');
+
+:root {
+    --orange: #FFC700;
+    --white: #FFF;
+    --dark: #1E1E1E;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+/* Navigatipon */
+
+
+nav {
+    background-color: var(--dark);
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+}
+
+.navigation-top {
+    display: flex;
+    margin-left: 15%;
+
+    img {
+        width: 168px;
+        height: 42px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+
+    a {
+        color: var(--white);
+        text-decoration: none;
+        padding: 0px 20px;
+        transition: 0.3s;
+    }
+
+    a:hover {
+        box-shadow: var(--orange) 0px 6px 0px 0px;
+    }
+
+    a:active {
+        box-shadow: var(--orange) 0px 6px 0px 0px;
+    }
+
+}
+
+#willys_card {
+    scroll-margin-top: 110px;
+}
+
+
+.contentbox {
+    height: 542px;
+    width: 1379px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.cards {
+    margin: 20px auto;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    padding: 21px 27px;
+    display: flex;
+    color: var(--orange);
+    background-color: var(--orange);
+}
+
+/*1379 x 542 	border-radius:20px #FFC700 #FFF*/
+
+.infokarte {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 500px;
+    width: 431px;
+    transition: 0.5s;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/*431 x 500	radius:20px*/
+
+
+.head_card {
+    height: 135px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.8px;
+    text-transform: uppercase;
+}
+
+.text_cardContainer {
+    display: flex;
+    margin: 0 19px;
+    width: 393px;
+    height: 267px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    box-sizing: border-box;
+    color: var(--white);
+}
+
+.text_card {
+    align-self: flex-end;
+}
+
+.button_container {
+    margin: 15px 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 68px;
+    width: 295px;
+    cursor: pointer;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 293px;
+    height: 64px;
+    border-radius: 20px;
+    border: 3px solid var(--orange);
+    background: rgba(217, 217, 217, 0.01);
+    backdrop-filter: blur(4px);
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 700;
+    transition: 0.25s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 0 -2px var(--orange);
+    }
+}
+
+
+#rubicon_card {
+    background-image: url("./imgs/rubicon_card.png");
+}
+
+#safari_card {
+    background-image: url('./imgs/safari_card.png');
+}
+
+#willys_card {
+    background-image: url('./imgs/willys_card.png');
+}
+
+
+/* Stil für die Abschnitte der Autos */
+.CarSection {
+    margin: 20px auto;
+    display: flex;
+    /* Verwendung von Flexbox */
+    justify-content: flex-end;
+    /* Rechtsausrichtung des Inhalts */
+}
+
+
+/* Hintergrundbilder für die einzelnen Autos */
+#Willys {
+    background-image: url(./imgs/willys-img.png);
+}
+
+#Rubicon {
+    background-image: url(./imgs/rubicon-img.png);
+}
+
+#Safari {
+    background-image: url(./imgs/Safari-img.png);
+}
+
+
+/* Stil für den Inhalt innerhalb der Abschnitte */
+.content {
+    width: 594px;
+    /* Breite des Inhalts */
+    right: 0px;
+    /* Abstand von rechts */
+}
+
+/* Stil für die Titel */
+.title {
+    width: 472px;
+    /* Breite des Titels */
+    color: var(--orange);
+    /* Textfarbe */
+    font-size: 122px;
+    /* Schriftgröße */
+    letter-spacing: -1.22px;
+    /* Buchstabenabstand */
+    text-transform: uppercase;
+    /* Text in Großbuchstaben */
+    margin-top: 46px;
+    /* Abstand von oben */
+    margin-bottom: 0px;
+    /* Abstand von unten */
+    font-weight: 700;
+    /* Schriftgewicht */
+}
+
+/* Stil für die Untertitel */
+.subtitle {
+    color: var(--white);
+    /* Textfarbe */
+    font-size: 51px;
+    /* Schriftgröße */
+    text-transform: uppercase;
+    /* Text in Großbuchstaben */
+    margin-top: 0px;
+    /* Abstand von oben */
+    margin-bottom: 9px;
+    /* Abstand von unten */
+    font-weight: 700;
+    /* Schriftgewicht */
+}
+
+/* Stil für die Titelhöhen und -größen für jedes Auto */
+#titleWilly {
+    height: 123px;
+    font-size: 122px;
+}
+
+#subTWilly {
+    height: 61px;
+    font-size: 51px;
+}
+
+#titleRubicon {
+    height: 103px;
+    font-size: 101px;
+}
+
+#subTRubicon {
+    height: 65px;
+    font-size: 54px;
+}
+
+#titleSafari {
+    height: 134px;
+    font-size: 129px;
+}
+
+#subTSafari {
+    height: 52px;
+    font-size: 43px;
+}
+
+/* Stil für Text und Listen */
+.text,
+.list {
+    color: var(--white);
+    /* Textfarbe */
+    font-size: 18px;
+    /* Schriftgröße */
+    text-transform: capitalize;
+    /* Erster Buchstabe in Großbuchstaben */
+    margin-bottom: 9px;
+    /* Abstand von unten */
+    margin-top: 0px;
+    /* Abstand von oben */
+    margin-left: 0px;
+    /* Abstand von links */
+    width: 450px;
+    /* Breite */
+    height: 74px;
+    /* Höhe */
+    font-weight: 600;
+    /* Normales Schriftgewicht */
+}
+
+/* Stil für Listen */
+.list {
+    padding-inline-start: 10px;
+    /* Einrückung der Listen */
+    list-style-position: inside;
+    /* Listenposition */
+}
+
+/* ############################################################################################################################ */
+
+/* Stil für Modal */
+.modal {
+    display: none;
+    /* Standardmäßig versteckt */
+    position: fixed;
+    /* Position festlegen */
+    z-index: 1;
+    /* Z-Index erhöhen, um über anderen Inhalt zu liegen */
+    left: 0;
+    /* Position von links */
+    top: 0;
+    /* Position von oben */
+    width: 100%;
+    /* Breite */
+    height: 100%;
+    /* Höhe */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Hintergrundfarbe mit Transparenz */
+    overflow: auto;
+    /* Scrollen erlauben, wenn der Inhalt zu groß ist */
+}
+
+/* Stil für Modalinhalt */
+.modal-content {
+    background-color: #fefefe;
+    /* Hintergrundfarbe des Modal-Inhalts */
+    margin: 15% auto;
+    /* Zentrierte Ausrichtung des Modals */
+    padding: 20px;
+    /* Innenabstand */
+    border: 1px solid #888;
+    /* Randstil und Farbe */
+    width: 80%;
+    /* Breite */
+}
+
+/* Stil für das Schließen-Symbol im Modal */
+.close {
+    color: #aaa;
+    /* Textfarbe */
+    float: right;
+    /* Ausrichtung rechts */
+    font-size: 28px;
+    /* Schriftgröße */
+    font-weight: bold;
+    /* Fettschrift */
+}
+
+/* Stil für das Schließen-Symbol im Modal beim Überfahren oder Fokus */
+.close:hover,
+.close:focus {
+    color: black;
+    /* Textfarbe */
+    text-decoration: none;
+    /* Keine Unterstreichung */
+    cursor: pointer;
+    /* Zeigercursor */
+}
+
+
+.hero {
+    position: relative;
+    height: 100%;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 36px;
+    padding-bottom: 38px;
+    text-align: center;
+    width: 100%;
+    height: 20%;
+    background-color: #FFC700;
+    text-transform: uppercase;
+}
+
+.slogan p {
+    font-size: 48px;
+    margin: 0px;
+}
+
+.slogan h1 {
+    margin: 0;
+    font-size: 80px;
+    font-weight: 900;
+}
+
+.hero-image {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-position: center;
+    background-image: url('./imgs/header-img.jpeg');
+    background-size: cover;
+}
+
+.form-container {
+    background: #7e7e7ec0;
+    padding: 20px;
+    border-radius: 20px;
+    width: 70%;
+    margin: 80px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: stretch;
+    align-items: end;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.column {
+    text-align: left;
+    display: block;
+    margin: 5px 20px;
+    flex-grow: 1;
+}
+
+.hero button {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    width: 100%;
+    height: 59px;
+    background-color: #FFC700;
+    padding: 8px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+}
+
+.column label {
+    display: block;
+    padding: 10px;
+}
+
+select {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    width: 100%;
+    min-width: 80px;
+    text-align: center;
+    height: 59px;
+    padding: 8px;
+    border-radius: 15px;
+    cursor: pointer;
+
+    appearance: none;
+    /* Remove arrow in IE */
+    -ms-appearance: none;
+    /* Remove arrow in Firefox */
+    -moz-appearance: none;
+    /* Remove arrow in Webkit browsers */
+    -webkit-appearance: none;
+    /* Remove arrow in Edge */
+    -webkit-appearance: none;
+}
+
+
+
+.column input[type="date"] {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    width: 100%;
+    height: 43px;
+    padding: 8px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+#service_section {
+    box-sizing: border box;
+    display: flex;
+    margin-top: 40px;
+    height: 169px;
+    justify-content: center;
+    align-items: center;
+    gap: 38px;
+}
+
+.section_container {
+    box-sizing: border box;
+    display: flex;
+    height: 102px;
+    width: 354px;
+    align-items: center;
+}
+
+.icon_section {
+    box-sizing: border box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 59px;
+    width: 59px;
+    border-radius: 18px;
+    background-color: var(--grey);
+}
+
+.text_section {
+    box-sizing: border box;
+    width: 295px;
+    height: 100%;
+
+    h2 {
+        margin: 0;
+        margin-left: 15px;
+        margin-bottom: 8px;
+        padding: 0;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    p {
+        margin: 0;
+        margin-left: 15px;
+        text-transform: capitalize;
+    }
+}
+
+
+footer {
+    padding: 0 40px;
+    background: #000;
+    color: #fff;
+    height: 19rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.5;
+}
+
+
+footer>.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.container>div {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin-top: 20px;
+}
+
+footer .legal {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+footer p {
+    line-height: 0;
+}
+
+/* Design Firmen */
+
+.fa {
+    padding: 20px;
+    font-size: 1.5rem;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    transition: opacity .5s;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+}
+
+.fa-instagram {
+    background: #125688;
+}
+
+.fa-youtube {
+    background: #bb0000;
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1.38fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 25rem;
+
+}
+
+.kontakt-container {
+    border: 2px solid #ffc700;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 1.3;
+}
+
+.kontakt-container h1 {
+    font-size: 4rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+}
+
+.kontakt-inhalt {
+    width: 60%;
+}
+
+.kontakt-anfrage {
+    line-height: 2;
+    font-size: 2rem;
+}
+
+.kontakt-anfrage i {
+    padding-right: 20px;
+}
+
+.telephone .nummer {
+    border-bottom: 15px solid #ffc700;
+    display: inline-block;
+    height: 35px;
+    transition: height 0.25s;
+}
+
+.telephone .nummer:hover {
+    height: 45px;
+}
+
+
+.adresse-container {
+    border: 2px solid #ffc700;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 1.3;
+}
+
+.adresse-container h1 {
+    font-size: 4rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+}
+
+.adresse {
+    padding-bottom: 1.5rem;
+}
+
+.adresse-container .karte {
+    border-radius: 20px;
+    background: rgba(255, 200, 0, 0.221);
+    width: 100%;
+    height: 40%;
+}
+
+.container_content {
+    width: 1379px;
+    height: 542px;
+    margin: 10px auto;
+}
+
+.karte {
+    height: 204px;
+    width: 558px;
+    overflow: hidden;
+}
+
+.action {
+    background-image: url("./imgs/action-bg.png");
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    .content-action {
+        width: 590px;
+
+        h2 {
+            margin: 0;
+            font-size: 111px;
+        }
+
+        h3 {
+            font-size: 40px;
+            margin: 0;
+        }
+
+        .preis-action {
+            color: var(--white);
+            font-size: 96px;
+            font-family: "Barlow Condensed", sans-serif;
+            text-transform: uppercase;
+            margin-bottom: 0px;
+            margin-top: 16px;
+        }
+
+        .copy {
+            color: var(--white);
+            font-size: 26px;
+            font-family: Inter;
+            margin-top: 0px;
+
+        }
+    }
+}
+
+#action {
+    scroll-margin-top: 110px;
+}

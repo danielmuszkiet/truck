@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="navigation-top">
+        <img src="./imgs/logo.png" alt="trailiex logo" />
+        <div>
+          <ul class="menu">
+            <li><a href="#hero-id">Home</a></li>
+            <li><a href="#action">Aktion</a></li>
+            <li><a href="#willys_card">Kategorie</a></li>
+            <li><a href="#titleWilly">Buchen</a></li>
+            <li><a href="#kontakte">Kontakte</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="hero-id">
+      <div class="hero-image">
+        <div class="form-container">
+          <form action="http://localhost:3000/send-email" method="POST">
+            <div class="form-row">
+              <div class="column">
+                <label for="from">Abholdatum</label>
+                <input type="date" id="from" name="from" required />
+              </div>
+              <div class="column">
+                <label for="to">Rückgabedatum:</label>
+                <input type="date" id="to" name="to" required />
+              </div>
+              <div class="column">
+                <select name="vehivleType">
+                  <option selected disabled>Jeep Typ</option>
+                  <option>Willy</option>
+                  <option>Rubicon</option>
+                  <option>Safari</option>
+                </select>
+              </div>
+              <div class="column">
+                <button type="submit" id="submit-btn">Anfragen</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="slogan">
+        <p>Geländewagen mieten.</p>
+        <h1>Keine Kompromisse.</h1>
+      </div>
+    </div>
+
+    <!-- action section -->
+    <div class="action contentbox" id="action">
+      <div class="content-action">
+        <h2 class="title">rubicon</h2>
+        <h3 class="subtitle">zum legendären Preis</h3>
+        <p class="preis-action">für 998€</p>
+        <p class="copy">Von Freitag bis Sonntag</p>
+        <button class="button" data-modal-id="modalRubicon">Anfragen</button>
+      </div>
+    </div>
+
+    <section id="service_section">
+      <!-- Container für gear icon und Text -->
+      <div class="section_container">
+        <div class="icon_section">
+          <img src="./imgs/gear_icon.png" alt="gear icon" />
+        </div>
+        <div class="text_section">
+          <h2>zuverlässige geländeautos.</h2>
+          <p>Von Schotterpisten bis zum unwegsamen Gebirgsgelände.</p>
+        </div>
+      </div>
+
+      <!-- Container für Clipboard icon und Text -->
+      <div class="section_container">
+        <div class="icon_section">
+          <img src="./imgs/clipboard_icon.png" alt="gear icon" />
+        </div>
+        <div class="text_section">
+          <h2>Offroad Schulung.</h2>
+          <p>wir zeigen ihnen, wie sie sicher mit den autos umgehen.</p>
+        </div>
+      </div>
+
+      <!-- Container für emoji icon und Text -->
+      <div class="section_container">
+        <div class="icon_section">
+          <img src="./imgs/emoji_icon.png" alt="gear icon" />
+        </div>
+        <div class="text_section">
+          <h2>wir kümmern uns.</h2>
+          <p>keine versteckten kosten,</p>
+          <p>nur der beste service.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="contentbox cards">
+      <!-- Willys Card -->
+      <div id="willys_card" class="infokarte">
+        <div class="head_card">willys</div>
+
+        <div class="text_cardContainer">
+          <div class="text_card">
+            Machen Sie Ihren nächsten Trip unvergesslich mit dieser Legende.
+          </div>
+        </div>
+
+        <div class="button_container">
+          <div class="button">Mehr Info</div>
+        </div>
+      </div>
+
+      <!-- Rubicon Card -->
+      <div id="rubicon_card" class="infokarte">
+        <div class="head_card">rubicon</div>
+        <div class="text_cardContainer">
+          <div class="text_card">
+            Mit dem Jeep Wrangler Rubicon Recon <br />
+            gibt es keine Situation, <br />auf die Sie nicht vorbereitet sind.
+          </div>
+        </div>
+        <div class="button_container">
+          <div class="button">Mehr Info</div>
+        </div>
+      </div>
+
+      <!-- Safari Card -->
+      <div id="safari_card" class="infokarte">
+        <div class="head_card">safari</div>
+
+        <div class="text_cardContainer">
+          <div class="text_card">
+            Persönlich auf Sie und Ihre Anforderungen konfiguriert und
+            zugeschnitten.
+          </div>
+        </div>
+
+        <div class="button_container">
+          <div class="button">Mehr Info</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Abschnitt für Willys -->
+    <section class="CarSection contentbox" id="Willys">
+      <div class="content">
+        <!-- Titel und Untertitel für Willys -->
+        <h1 class="title" id="titleWilly">Willys</h1>
+        <h2 class="subtitle" id="subTWilly">Legende Fahren</h2>
+        <!-- Text und Liste für Willys -->
+        <p class="text">
+          Machen Sie Ihren nächsten Trip unvergesslich mit dieser Legende..
+        </p>
+
+        <ul class="list">
+          <li>Jeep Wrangler Willys</li>
+          <li>285 PS Allradantrieb</li>
+          <li>3.6 Liter V-6 Benzin</li>
+        </ul>
+        <!-- Button für Anfragen für Willys -->
+        <button class="button" data-modal-id="modalWillys">Anfragen</button>
+      </div>
+
+      <!-- Modal für Willys -->
+      <div id="modalWillys" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <!-- Text für das Modal-Fenster des Willys -->
+          <p>
+            Hier kannst du deinen Text für das Modal-Fenster des Willys
+            einfügen.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Abschnitt für Rubicon -->
+    <section class="CarSection contentbox" id="Rubicon">
+      <div class="content">
+        <!-- Titel und Untertitel für Rubicon -->
+        <h1 class="title" id="titleRubicon">Rubicon</h1>
+        <h2 class="subtitle" id="subTRubicon">Plug-in-Hybrid</h2>
+        <!-- Text und Liste für Rubicon -->
+        <p class="text">
+          Mit dem Jeep Wrangler Rubicon Recon gibt es keine Situation, auf die
+          Sie nicht vorbereitet sind.
+        </p>
+        <ul class="list">
+          <li>Jeep Wrangler Rubicon Recon</li>
+          <li>272 PS Allradantrieb</li>
+          <li>2.0 Liter V-4 Benzin</li>
+        </ul>
+        <!-- Button für Anfragen für Rubicon -->
+        <button class="button" data-modal-id="modalRubicon">Anfragen</button>
+      </div>
+
+      <!-- Modal für Rubicon -->
+      <div id="modalRubicon" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <!-- Text für das Modal-Fenster des Rubicon -->
+          <p>
+            Hier kannst du deinen Text für das Modal-Fenster des Rubicon
+            einfügen.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Abschnitt für Safari -->
+    <section class="CarSection contentbox" id="Safari">
+      <div class="content">
+        <!-- Titel und Untertitel für Safari -->
+        <h1 class="title" id="titleSafari">Safari</h1>
+        <h2 class="subtitle" id="subTSafari">High Performance</h2>
+        <!-- Text und Liste für Safari -->
+        <p class="text">
+          Persönlich auf Sie und Ihre Anforderungen konfiguriert und
+          zugeschnitten
+        </p>
+        <ul class="list">
+          <li>Verschiedene Modelle</li>
+          <li>270 PS bis 470 PS</li>
+          <li>6.4 Liter V-8 Benzin oder 2,2 Liter V-4 Diesel</li>
+        </ul>
+        <!-- Button für Anfragen für Safari -->
+        <button class="button" data-modal-id="modalSafari">Anfragen</button>
+      </div>
+
+      <!-- Modal für Safari -->
+      <div id="modalSafari" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <!-- Text für das Modal-Fenster des Safari -->
+          <p>
+            Hier kannst du deinen Text für das Modal-Fenster des Safari
+            einfügen.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container_content">
+      <div class="container">
+        <div class="kontakt-container">
+          <div class="kontakt-inhalt">
+            <h1>Kontakt</h1>
+            <p>Schreib uns einfach oder ruf uns an.</p>
+            <p>
+              Wir beantworten gerne deine Fragen und helfen dir, eines unserer
+              besten fahrzeuge zu mieten.
+            </p>
+          </div>
+          <div class="kontakt-anfrage">
+            <div class="telephone">
+              <i class="fa fa-phone"></i
+              ><span class="nummer">+49 0987 4561 2323</span>
+            </div>
+            <div class="mail">
+              <i class="fa fa-envelope"></i
+              ><a href="mailto:support@trailex.de">support@trailex.de</a>
+            </div>
+          </div>
+        </div>
+        <div class="adresse-container">
+          <h1>Adresse</h1>
+          <div class="adresse">
+            <p>TRAILEX</p>
+            <p>Teutonenstraße 33-29</p>
+            <p>Leinfelden-Echterdingen</p>
+            <p>70771</p>
+          </div>
+          <div class="karte">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5267.697959592294!2d9.140759356433533!3d48.68925195756603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799dd4fc2610301%3A0x9b613b5f852ef1a2!2sTeutonenstra%C3%9Fe%2033-29%2C%2070771%20Leinfelden-Echterdingen!5e0!3m2!1sde!2sde!4v1715764300363!5m2!1sde!2sde"
+              width="558"
+              height="204"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="logo">
+        <img src="imgs/Tailex_logo.png" alt="Trailex Logo" />
+      </div>
+      <div class="container">
+        <div>
+          Wir sorgen für Ihr Unvergessliches Offroad-Erlebnis. Mit den besten
+          Autos und einem sensationellen Service
+        </div>
+        <div>
+          <p>IBAN: DE89 9956 0000 7895 65</p>
+          <p>PayPal</p>
+        </div>
+        <div>
+          <p>TRAILEX</p>
+          <p>Am feld 12</p>
+          <p>79563 Pappenheim</p>
+        </div>
+        <div>
+          <div class="legal">
+            <p>Impressum</p>
+            <p>Datenschutz</p>
+            <p>AGB</p>
+          </div>
+          <div>
+            <p class="fa fa-instagram"></p>
+            <p class="fa fa-youtube"></p>
+            <p class="fa fa-facebook"></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
