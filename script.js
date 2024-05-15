@@ -26,7 +26,7 @@ form.addEventListener("submit", async (event) => {
       }),
     }
   );
-  console.log(res.json());
+  console.log(res);
 });
 
 // Öffnen des Modals bei Klick auf den Button
