@@ -12,6 +12,9 @@ form.addEventListener("submit", async (event) => {
   const returnDate = formData.get("to");
   const email = formData.get("email");
   const msg = formData.get("msg");
+  const tel = formData.get("tel");
+  const jeepType = formData.get("jeep-select");
+  const exp = formData.get("offroad-exp");
 
   const res = await fetch(
     "https://truck-backend-kipy.onrender.com/send-email",
@@ -23,6 +26,9 @@ form.addEventListener("submit", async (event) => {
         to: returnDate,
         email: email,
         msg: msg,
+        tel: tel,
+        jeepType: jeepType,
+        exp: exp,
       }),
     }
   );
