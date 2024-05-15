@@ -1,10 +1,33 @@
 // JavaScript, um das Modal zu öffnen und zu schließen
 var buttons = document.querySelectorAll(".button");
 var spans = document.querySelectorAll(".close");
-const submitBtn = document.getElementById("submit-btn");
+const form = document.getElementById("my-form");
 
-submitBtn.addEventListener("click", () => {
-  alert("Klick mich härter!!!!! ");
+form.addEventListener("submit", async (event) => {
+  console.log("Test");
+  event.preventDefault(); // Prevent the default form submission
+  const formData = new FormData(form);
+
+  const pickUpDate = formData.get("from");
+  const returnDate = formData.get("to");
+  const email = formData.get("email");
+  const msg = formData.get("msg");
+
+  fetch("https://truck-backend-kipy.onrender.com/send-email", {
+    method: "post",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      from: pickUpDate,
+      to: returnDate,
+      email: email,
+      msg: msg,
+    }),
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((error) => console.log("Error: Check URL"));
 });
 
 // Öffnen des Modals bei Klick auf den Button
