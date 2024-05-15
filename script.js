@@ -13,21 +13,20 @@ form.addEventListener("submit", async (event) => {
   const email = formData.get("email");
   const msg = formData.get("msg");
 
-  fetch("https://truck-backend-kipy.onrender.com/send-email", {
-    method: "post",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      from: pickUpDate,
-      to: returnDate,
-      email: email,
-      msg: msg,
-    }),
-  })
-    .then((response) => response.json())
-    .then((result) => {
-      console.log(result);
-    })
-    .catch((error) => console.log("Error: Check URL"));
+  const res = await fetch(
+    "https://truck-backend-kipy.onrender.com/send-email",
+    {
+      method: "post",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        from: pickUpDate,
+        to: returnDate,
+        email: email,
+        msg: msg,
+      }),
+    }
+  );
+  console.log(res.json());
 });
 
 // Öffnen des Modals bei Klick auf den Button
