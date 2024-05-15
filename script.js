@@ -32,7 +32,14 @@ form.addEventListener("submit", async (event) => {
       }),
     }
   );
-  console.log(res);
+
+  if (res.ok) {
+    alert("Mail versendet! Sie werden nun weitergeleitet....");
+    window.location.href = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
+  } else {
+    console.log("Hopala");
+  }
+
 });
 
 // Öffnen des Modals bei Klick auf den Button
