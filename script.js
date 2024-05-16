@@ -65,7 +65,8 @@ form.addEventListener("submit", async (event) => {
   const yesno = formData.get("yesno");
   console.log(pickUpDate, returnDate, email, msg, tel, jeepType, exp, yesno);
 
-
+  form.style.display = "none";
+  document.getElementById("spinner").style.display = "flex";
 
   const res = await fetch(
     "https://truck-backend-znw3.onrender.com/send-email",
@@ -84,17 +85,16 @@ form.addEventListener("submit", async (event) => {
       }),
     }
   );
-  form.style.display = "none";
   if (res.ok) {
+    document.getElementById("spinner").style.display = "none";
     const al = document.getElementById("confirm-alert");
     al.style.display = "";
     setTimeout(function () {
       al.style.display = "none";
       form.style.display = "";
       form.reset();
-      const modalId = this.getAttribute("modalRubicon");
+      const modalId = document.getElementById("modalRubicon");
       modalId.style.display = "none";
-      
     }, 5000);
   } else {
     console.log("Hopala etwas ist falsch gelaufen");
