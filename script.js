@@ -1,5 +1,5 @@
 // JavaScript, um das Modal zu öffnen und zu schließen
-var buttons = document.querySelectorAll(".button");
+var buttons = document.querySelectorAll(".buttonCall");
 var spans = document.querySelectorAll(".close");
 const form = document.getElementById("my-form");
 
@@ -40,6 +40,7 @@ form.addEventListener("submit", async (event) => {
     console.log("Hopala");
   }
 });
+
 
 // Öffnen des Modals bei Klick auf den Button
 buttons.forEach(function (button) {

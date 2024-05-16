@@ -9,6 +9,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+
   </head>
 
   <body>
@@ -22,7 +23,7 @@
             <li><a href="#action">Aktion</a></li>
             <li><a href="#willys_card">Kategorie</a></li>
             <li><a href="#titleWilly">Buchen</a></li>
-            <li><a href="#kontakte">Kontakte</a></li>
+            <li><a href="#kontakt-anfrage">Kontakte</a></li>
           </ul>
         </div>
       </div>
@@ -71,7 +72,7 @@
         <h3 class="subtitle">zum legendären Preis</h3>
         <p class="preis-action">für 998€</p>
         <p class="copy">Von Freitag bis Sonntag</p>
-        <button class="button" data-modal-id="modalRubicon">Anfragen</button>
+        <button class="button buttonCall" data-modal-id="modalRubicon">Anfragen</button>
       </div>
     </div>
 
@@ -123,7 +124,7 @@
         </div>
 
         <div class="button_container">
-          <div class="button">Mehr Info</div>
+          <div class="button buttonCall" data-modal-id="modalWillys">Mehr Info</div>
         </div>
       </div>
 
@@ -137,7 +138,7 @@
           </div>
         </div>
         <div class="button_container">
-          <div class="button">Mehr Info</div>
+          <div class="button buttonCall" data-modal-id="modalRubicon">Mehr Info</div>
         </div>
       </div>
 
@@ -153,7 +154,7 @@
         </div>
 
         <div class="button_container">
-          <div class="button">Mehr Info</div>
+          <div class="button buttonCall" data-modal-id="modalSafari">Mehr Info</div>
         </div>
       </div>
     </div>
@@ -175,7 +176,7 @@
           <li>3.6 Liter V-6 Benzin</li>
         </ul>
         <!-- Button für Anfragen für Willys -->
-        <button class="button" data-modal-id="modalWillys">Anfragen</button>
+        <button class="button buttonCall" data-modal-id="modalWillys">Anfragen</button>
       </div>
 
       <!-- Modal für Willys -->
@@ -208,7 +209,7 @@
           <li>2.0 Liter V-4 Benzin</li>
         </ul>
         <!-- Button für Anfragen für Rubicon -->
-        <button class="button" data-modal-id="modalRubicon">Anfragen</button>
+        <button class="button buttonCall" data-modal-id="modalRubicon">Anfragen</button>
       </div>
 
       <!-- Modal für Rubicon -->
@@ -241,7 +242,7 @@
           <li>6.4 Liter V-8 Benzin oder 2,2 Liter V-4 Diesel</li>
         </ul>
         <!-- Button für Anfragen für Safari -->
-        <button class="button" data-modal-id="modalSafari">Anfragen</button>
+        <button class="button buttonCall" data-modal-id="modalSafari">Anfragen</button>
       </div>
 
       <!-- Modal für Safari -->
@@ -259,7 +260,7 @@
 
     <div class="container_content">
       <div class="container">
-        <div class="kontakt-container">
+        <div class="kontakt-container" id="kontakt-anfrage">
           <div class="kontakt-inhalt">
             <h1>Kontakt</h1>
             <p>Schreib uns einfach oder ruf uns an.</p>
@@ -302,6 +303,67 @@
       </div>
     </div>
 
+    <!-- impressum -->
+
+    <div id="modalImpressum" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <!-- Text für das Modal-Fenster des Safari -->
+        <h2>Impressum</h2>
+        <h3>Firmenname: TRAILEX Offroad Autovermietung GmbH</h3>
+        <p><strong>Geschäftsführer:</strong> Max Mustermann</p>
+        <p><strong>Anschrift:</strong><br>
+          Musterstraße 123<br>
+          12345 Musterstadt<br>
+          Deutschland <br>
+      </p>
+      <p><strong>Kontakt:</strong><br>
+        <strong> Telefon:</strong> +49 1234 567890<br>
+        <strong> Fax:</strong> +49 1234 567891<br>
+        <strong> E-Mail:</strong> info@trailex-offroad.de<br>
+        <strong> Web:</strong> <a href="https://www.trailex-offroad.de">www.trailex-offroad.de</a>
+      </p>
+      <p><strong>Handelsregister:</strong><br>
+                  Amtsgericht Musterstadt, HRB 123456
+      </p>
+      <p><strong>Umsatzsteuer-Identifikationsnummer:</strong> DE123456789
+      </p>
+      <p>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:<br>
+                    Max Mustermann<br>
+                    Adresse wie oben
+      </p>
+
+      </div>
+    </div>
+
+    <!-- AGB -->
+          <!-- Modal für AGB -->
+          <div id="modalAGB" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <!-- Text für das Modal-Fenster des Safari -->
+              <h2>AGB</h2>
+              <h3>Allgemeine Geschäftsbedingungen <br> der TRAILEX Offroad Autovermietung GmbH</h3>
+              <h4>§1 Geltungsbereich</h4>
+              <p>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge, die zwischen der TRAILEX Offroad Autovermietung GmbH (nachfolgend "TRAILEX") und ihren Kunden über die Anmietung von Fahrzeugen abgeschlossen werden. Abweichende Bedingungen des Kunden erkennen wir nicht an, es sei denn, TRAILEX hätte ausdrücklich schriftlich ihrer Geltung zugestimmt.</p>
+              <h4>§2 Vertragsabschluss</h4>
+              <p>(1) Die Präsentation der Fahrzeuge auf der Website von TRAILEX stellt kein rechtlich bindendes Angebot, sondern einen unverbindlichen Online-Katalog dar. Durch das Ausfüllen und Absenden des Online-Buchungsformulars gibt der Kunde ein verbindliches Angebot auf Abschluss eines Mietvertrages ab.(2) TRAILEX kann dieses Angebot innerhalb von sieben Tagen durch Zusendung einer Auftragsbestätigung per E-Mail oder durch Auslieferung des angemieteten Fahrzeugs annehmen.</p>
+              <h4>§3 Mietdauer und Rückgabe</h4>
+              <p>(1) Die Mietdauer beginnt zum vereinbarten Zeitpunkt und endet mit der Rückgabe des Fahrzeugs an TRAILEX. Das Fahrzeug muss in dem Zustand zurückgegeben werden, in dem es übernommen wurde. <br> (2) Bei verspäteter Rückgabe des Fahrzeugs werden zusätzliche Gebühren fällig. Diese Gebühren entsprechen den üblichen Tagesmieten zuzüglich eines Zuschlags von 50%.</p>
+              <h4>§4 Mietpreise und Zahlungsbedingungen</h4>
+              <p>(1) Die angegebenen Mietpreise sind bindend. Sie schließen die gesetzliche Mehrwertsteuer ein. (2) Die Zahlung des Mietpreises erfolgt per Vorauskasse, per Kreditkarte oder per Überweisung.</p>
+              <h4>§5 Haftung und Versicherung</h4>
+              <p>(1) Das Fahrzeug ist vollkaskoversichert. Im Schadensfall trägt der Kunde eine Selbstbeteiligung in Höhe von 500 Euro. (2) TRAILEX haftet nicht für den Verlust persönlicher Gegenstände, die im gemieteten Fahrzeug hinterlassen wurden.</p>
+              <h4>§6 Kündigung Der Kunde kann den Mietvertrag jederzeit kündigen.</h4>
+              <p>Im Falle einer Stornierung bis zu 24 Stunden vor Mietbeginn werden bereits gezahlte Beträge abzüglich einer Stornierungsgebühr von 20% des Mietpreises erstattet. Bei späteren Stornierungen erfolgt keine Rückerstattung.</p>
+              <h4>§7 Schlussbestimmungen</h4>
+              <p>(1) Änderungen oder Ergänzungen dieses Vertrags bedürfen der Schriftform. (2) Sollten einzelne Bestimmungen dieses Vertrags unwirksam sein oder werden, so wird dadurch die Wirksamkeit der übrigen Bestimmungen nicht berührt.</p>
+            </div>
+          </div>
+        </section>
+
+
+
     <footer>
       <div class="logo">
         <img src="imgs/Tailex_logo.png" alt="Trailex Logo" />
@@ -322,9 +384,10 @@
         </div>
         <div>
           <div class="legal">
-            <p>Impressum</p>
-            <p>Datenschutz</p>
-            <p>AGB</p>
+            <button class="buttonCall agbImpressumButton" data-modal-id="modalImpressum">Impressum</button>
+            <button class="buttonCall agbImpressumButton" data-modal-id="modalAGB">AGB</button>
+            
+
           </div>
           <div>
             <p class="fa fa-instagram"></p>
