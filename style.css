@@ -9,6 +9,7 @@
 
 html,
 body {
+    scroll-behavior: smooth;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -456,6 +457,7 @@ nav {
 .column label {
     display: block;
     padding: 10px;
+    color: white;
 }
 
 select {
