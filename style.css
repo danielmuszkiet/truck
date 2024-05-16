@@ -776,3 +776,6 @@ footer p {
     font-family: sans-serif;
     cursor: pointer;
 }
+#kontakt-anfrage {
+    scroll-margin-top: 110px;
+}
