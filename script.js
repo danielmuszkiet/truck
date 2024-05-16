@@ -92,9 +92,9 @@ form.addEventListener("submit", async (event) => {
       al.style.display = "none";
       form.style.display = "";
       form.reset();
-      const modalId = this.getAttribute("data-modal-id");
-      const modal = document.getElementById(modalId);
-      modal.style.display = "none";
+      const modalId = this.getAttribute("modalRubicon");
+      modalId.style.display = "none";
+      
     }, 5000);
   } else {
     console.log("Hopala etwas ist falsch gelaufen");
