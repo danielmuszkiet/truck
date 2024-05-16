@@ -24,8 +24,8 @@ form.addEventListener("submit", async (event) => {
 
   const pickUpDate = formData.get("from");
   const returnDate = formData.get("to");
-  const email = "danielmuszkiet@icloud.com"; //formData.get("email");
-  const msg = "Das ist eine cumstom Mail"; //formData.get("msg");
+  const email = formData.get("email");
+  const msg = formData.get("msg");
   const tel = formData.get("tel");
   const jeepType = formData.get("jeep-select");
   const exp = formData.get("offroad-exp");
