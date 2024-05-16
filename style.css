@@ -6,6 +6,7 @@
     --white: #FFF;
     --dark: #1E1E1E;
     --antragsformular-grey: #787878;
+    --gray: #787878
 }
 
 html,
@@ -1298,3 +1299,48 @@ input[type=radio]:checked {
 }
 
 /* End Slider2 SAFARI*/
+.confirmation_field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 144px;
+    width: 1253px;
+    margin: 10px auto;
+    background-color: var(--gray);
+    border-radius: 20px;
+}
+
+.text_container {
+    width: 715px;
+}
+
+.text_container>h3 {
+    width: 696px;
+    color: var(--white);
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    top: 33px;
+    margin-bottom: 10px;
+}
+
+.text_container>p {
+    color: var(--white);
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.check_icon {
+    width: 68px;
+    height: 68px;
+    left: 966px;
+    top: 40px;
+}
