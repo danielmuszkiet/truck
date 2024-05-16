@@ -4,6 +4,39 @@ var spans = document.querySelectorAll(".close");
 const form = document.getElementById("my-form");
 const heroFormBtn = document.getElementById("hero-contact-btn");
 
+const t1 = document.getElementById("from-date1");
+t1.min = new Date().toISOString().split("T")[0];
+const t2 = document.getElementById("to-date1");
+// Get tomorrow's date
+const tomorrow = new Date();
+tomorrow.setDate(tomorrow.getDate() + 1);
+
+t1.addEventListener("input", function () {
+  // Get the value of t1 and convert it to a Date object
+  const fromDate = new Date(t1.value);
+
+  // If t1 has a valid value
+  if (!isNaN(fromDate.getTime())) {
+    // Clone the fromDate object to avoid modifying the original one
+    const toDate = new Date(fromDate);
+
+    // Add one day to toDate
+    toDate.setDate(toDate.getDate() + 1);
+
+    // Format toDate as YYYY-MM-DD
+    const formattedDate = toDate.toISOString().split("T")[0];
+
+    // Set the min attribute of t2 to be t1 + 1 day
+    t2.min = formattedDate;
+  }
+});
+
+// Format tomorrow's date as YYYY-MM-DD
+const formattedTomorrow = tomorrow.toISOString().split("T")[0];
+
+// Set the min attribute of the input element to tomorrow's date
+t2.min = formattedTomorrow;
+
 heroFormBtn.addEventListener("click", () => {
   const from = document.getElementById("from-date1").value;
   const to = document.getElementById("to-date1").value;
@@ -31,6 +64,12 @@ form.addEventListener("submit", async (event) => {
   const exp = formData.get("offroad-exp");
   const yesno = formData.get("yesno");
   console.log(pickUpDate, returnDate, email, msg, tel, jeepType, exp, yesno);
+
+  // Überprüfen, ob das Abholdatum in der Vergangenheit liegt
+  if (pickUpDate < currentDate) {
+    alert("Das Abholdatum kann nicht in der Vergangenheit liegen.");
+    return; // Stoppt die Ausführung des Codes, wenn das Datum ungültig ist
+  }
 
   const res = await fetch(
     "https://truck-backend-znw3.onrender.com/send-email",
