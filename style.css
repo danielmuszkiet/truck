@@ -1385,3 +1385,16 @@ input[type=radio]:checked {
         transform: rotate(360deg);
     }
 }
+.w3-animate-opacity {
+    animation: opac 0.8s;
+}
+
+@keyframes opac {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
